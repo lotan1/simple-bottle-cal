@@ -4,7 +4,7 @@ import calendar
 from bottle import route, run, static_file
 from datetime import datetime
 
-PORT = int(os.environ.get("PORT", 8080))
+PORT = int(os.environ.get("PORT", 50))
 BASE_PATH = pathlib.Path(__file__).parent
 
 cal1 = calendar.HTMLCalendar(calendar.SUNDAY)
@@ -36,4 +36,4 @@ def show_page(year):
 
 
 
-run(host='localhost', port=PORT)
+run(host='0.0.0.0', port=PORT)
